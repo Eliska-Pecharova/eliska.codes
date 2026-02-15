@@ -1,0 +1,119 @@
+/* -------------------------------------------------- */
+/* LIGHT MODE (default) */
+/* -------------------------------------------------- */
+
+:root {
+  --bg: #ffffff;
+  --text: #362f4f;
+
+  --neon: #e4ff30;
+  --electric: #5b23ff;
+  --blue: #008bff;
+
+  /* Layout-specific */
+  --layout-padding: 8rem 1.5rem;
+  --layout-max-width: 1200px;
+}
+
+/* -------------------------------------------------- */
+/* DARK MODE */
+/* -------------------------------------------------- */
+
+html.dark {
+  --bg: #362f4f;
+  --text: #ffffff;
+
+  /* Neon a electric zůstávají stejné */
+}
+
+/* -------------------------------------------------- */
+/* LAYOUT WRAPPER */
+/* -------------------------------------------------- */
+
+.layout {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Výběr textu */
+::selection {
+  background: var(--neon);
+  color: black;
+}
+
+/* -------------------------------------------------- */
+/* SECTIONS */
+/* -------------------------------------------------- */
+
+.section {
+  padding: var(--layout-padding);
+}
+
+.container {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* -------------------------------------------------- */
+/* MEDIA QUERIES */
+/* -------------------------------------------------- */
+
+/* TABLET */
+@media (max-width: 1023px) {
+  .section {
+    padding: 6rem 1.5rem;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 1.2rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}

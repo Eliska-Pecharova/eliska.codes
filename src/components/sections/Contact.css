@@ -1,0 +1,87 @@
+.contact {
+  padding: 5rem 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.contact__text {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.contact__textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact__button {
+  padding: 1rem 2rem;
+  background: var(--neon);
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.contact__button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+  .contact {
+    padding: 3rem 1rem;
+    max-width: 100%;
+  }
+
+  .contact__title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact__text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .contact__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    width: 100%;
+    max-width: 320px;
+  }
+}

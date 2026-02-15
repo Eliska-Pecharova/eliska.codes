@@ -1,0 +1,76 @@
+.footer {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+/* TITULEK */
+.footer__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.footer__title span {
+  background: linear-gradient(90deg, var(--blue), var(--electric));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* EMAIL */
+.footer__email {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 1.4rem 1.6rem;
+  border: 2px dashed var(--footer-email-dark-color);
+  border-radius: 0.6rem;
+  color: var(--footer-email-dark-color);
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* SOCIAL */
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.footer__social a {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footer__social a:hover {
+  color: var(--neon);
+  text-shadow: 0 0 8px var(--neon);
+}
+
+/* COPYRIGHT */
+.footer__copy {
+  margin-top: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* LIGHT MODE ÚPRAVY */
+:root[data-theme="light"] .footer {
+  border-top: 1px solid var(--border);
+}
+
+:root[data-theme="light"] .footer__email {
+  border-color: var(--border);
+  color: var(--text);
+}
+
+:root[data-theme="light"] .footer__copy {
+  color: var(--text);
+  opacity: 0.6;
+}

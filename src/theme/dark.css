@@ -1,0 +1,25 @@
+:root[data-theme="dark"] {
+  --bg: #362f4f;
+  --bg-secondary: #14141f;
+  --text: #ffffff;
+  --text2: #000000;
+  --text-muted: #cfcfcf;
+  --border: rgba(255, 255, 255, 0.1);
+  --card: #14141f;
+  --skills-social: linear-gradient(90deg, var(--blue), var(--purple));
+
+  /* USE IN CODE */
+  --navbar-logo-e-bg-color: var(--accent);
+  --hero-title-color: var(--text);
+  --hero-stroke-color: var(--accent);
+  --hero-cta-bg-color: var(--accent);
+  --hero-cta-color: var(--text2);
+  --project-detail-btn-color: var(--accent);
+  --projects-more-bg-color: var(--accent);
+  --projects-more-color: var(--text2);
+  --skills-social-bg-color: var(--skills-social);
+  --skills-border-color: var(--purple);
+  --skills-icon-color: var(--text2);
+  --footer-email-dark-color: var(--accent);
+  --box-shadow-color: var(--accent);
+}
