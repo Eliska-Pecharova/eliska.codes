@@ -1,5 +1,10 @@
 import "./Footer.css";
 
+/**
+ * Na lokalizace je určitě dobrá Tolgee knihovna.
+ * URL: https://docs.tolgee.io/js-sdk/integrations/react/installation 
+ * Je ji nějaká varianta její ve free verzi
+ */
 const texts = {
   en: {
     title1: "Build the",

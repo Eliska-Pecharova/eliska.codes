@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Sun, Moon, Menu, X, Languages } from "lucide-react";
 
+/**
+ * Hmmm, doporučil bych pro každou React komponentu vlastní soubor s CSS stylem
+ */
 const ThemeButton = ({ theme, toggleTheme, toggleLang }) => (
   <div className="navbar__buttons">
     <button className="navbar__theme-btn" onClick={toggleTheme}>
@@ -17,9 +20,11 @@ const ThemeButton = ({ theme, toggleTheme, toggleLang }) => (
 
 const Navbar = ({ lang, toggleLang }) => {
   const [scrolled, setScrolled] = useState(false);
+  // Pro ten theme opět ne state, ale Reactový Kontext - případně tě to naučím.
   const [theme, setTheme] = useState("dark");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // K čemu je toto??? Zobrazení ScrollTop tlačítka??
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -34,7 +39,10 @@ const Navbar = ({ lang, toggleLang }) => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
+    // Pro skládání className je tu jednodušší a čístši varianta, knihovna clsx. https://www.npmjs.com/package/clsx 
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
+      {/* Tady těch prvků je opravdu hodně, Logo, Navigace, Desktop Buttons, Hamburger and MobileMenu, 
+      možná bych to dal do samostatných React komponent */}
       <div className="navbar__inner">
         {/* Logo */}
         <div className="navbar__brand">
