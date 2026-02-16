@@ -11,8 +11,15 @@ const App = () => {
   const [lang, setLang] = useState("en");
 
   const toggleLang = () => {
+    // Ano, pro useState se používá update funkce. Výborně.
     setLang((prev) => (prev === "en" ? "cs" : "en"));
   };
+
+  /**
+   * Zde by bylo řešení jednodušší.....umíš Reactové kontexty? Nastíním.
+   * https://react.dev/learn/passing-data-deeply-with-context 
+   * Nemusí se tím přidávat property lang na každý element. Zkus mrknout na tu URL. Případně pomůžu.
+   */
 
   return (
     <Layout lang={lang}>
