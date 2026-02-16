@@ -10,6 +10,7 @@ export default function Projects({ lang }) {
   return (
     <section className="projects" id="projects">
       <h2 className="projects__title">
+        { /** Toto opravdu dát do Tolgee nebo si vytvoříme vlastní React kontext s vlastním hookem. Co myslíš? */ }
         {lang === "cs" ? "Moje Projekty" : "My Projects"}
       </h2>
 

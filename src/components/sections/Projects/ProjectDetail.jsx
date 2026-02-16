@@ -1,5 +1,8 @@
 import "./ProjectDetail.css";
 
+/**
+ * Super, tahleta komponenta je graficky velmi hezká, moc se mi líbí.
+ */
 const ProjectDetail = ({ project, lang, onClose }) => {
   if (!project) return null;
 
@@ -14,6 +17,8 @@ const ProjectDetail = ({ project, lang, onClose }) => {
 
         <p className="project-detail__desc">{project.longDesc[lang]}</p>
 
+
+        {/* Nezkusíme si udělat vlastní sliding galerii obrázků? Co myslíš? To by bylo COOL */}
         <div className="project-detail__gallery">
           {project.gallery?.map((img, i) => (
             <img key={i} src={img} alt="" />
@@ -26,6 +31,7 @@ const ProjectDetail = ({ project, lang, onClose }) => {
           ))}
         </div>
 
+          {/* Ten GitHub se nám tu jako Link opakuje, možná vlastní komponenta */}
         <div className="project-detail__links">
           {project.github && (
             <a href={project.github} target="_blank">

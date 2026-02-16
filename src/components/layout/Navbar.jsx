@@ -53,6 +53,8 @@ const Navbar = ({ lang, toggleLang }) => {
         </div>
 
         {/* Desktop links */}
+        {/* Zde by nebyl špatný nápad odchytit si, když uživatel klikne na link a udělat smoothScrolling
+        Případně napovím, jak na to  */}
         <div className="navbar__links">
           <a href="#projects">Projects</a>
           <a href="#skills">Tech Stack</a>
